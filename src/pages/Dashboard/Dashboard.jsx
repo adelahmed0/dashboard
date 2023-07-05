@@ -6,6 +6,7 @@ export const Dashboard = () => {
         <div className='dashboard'>
             <TopSearch/>
             Dashboard
+            Adel واحد بس 1111111111111111
         </div>
     )
 }
