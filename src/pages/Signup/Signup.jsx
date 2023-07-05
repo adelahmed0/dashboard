@@ -1,37 +1,38 @@
 import "./signup.css";
 import image from "../../assets/signup.png";
-import {FcGoogle} from "react-icons/fc";
-import {AiOutlineEye, AiFillCheckCircle} from "react-icons/Ai";
+// import { FcGoogle } from "react-icons/fc";
+// import {AiOutlineEye, AiFillCheckCircle} from "react-icons/Ai";
 
 export const Signup = () => {
     return (
         <div className="signup">
             <div className="contentt">
                 <div className="image-signup">
-                    <img src={image} alt="signup-image"/>
+                    <img src={image} alt="signup-image"  width={200}/>
                 </div>
                 <div className="sign">
                     <h1>SignUp</h1>
                     <p>Enter your email and password to sign in!</p>
 
                     <button>
-                        <FcGoogle/> Signup with Google
+                        {/* <FcGoogle /> */}
+                         Signup with Google
                     </button>
 
 
                     <div className="hr">
-                        <hr/>
+                        <hr />
                         <p className="or">or</p>
-                        <hr/>
+                        <hr />
                     </div>
                     <div className="form">
                         <form action="">
                             <h2> Full Name*</h2>
-                            <input type="text" placeholder="Enterr your Name"/>
+                            <input type="text" placeholder="Enterr your Name" />
                             <h2>Email*</h2>
-                            <input type="email" placeholder="Enter your email"/>
+                            <input type="email" placeholder="Enter your email" />
                             <h2>Phone*</h2>
-                            <input type="num " placeholder="Enter your phone Nume"/>
+                            <input type="num " placeholder="Enter your phone Nume" />
                             <h2>Password*</h2>
                             <input
                                 type="text"
@@ -41,16 +42,16 @@ export const Signup = () => {
                                 className="password"
                             />
                             <span className="icon">
-                <AiOutlineEye/>
-              </span>
+                                {/* <AiOutlineEye /> */}
+                            </span>
                         </form>
                         <h3>
-              <span className="circle">
-                <AiFillCheckCircle/>
-              </span>{" "}
+                            <span className="circle">
+                                {/* <AiFillCheckCircle /> */}
+                            </span>{" "}
                             I agree to the <span className="span">Term &Conditions</span>
                         </h3>
-                        <input type="text" placeholder="Sign Up" className="submit"/>
+                        <input type="text" placeholder="Sign Up" className="submit" />
                         <p className="text">
                             Already Have Account ?<span className="sign-in">Sign in</span>
                         </p>

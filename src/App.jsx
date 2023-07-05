@@ -18,8 +18,7 @@ function App() {
         <BrowserRouter>
             <Sidebar>
                 <Routes>
-                    <Route path="/" element={<Signup/>}/>
-                    <Route path="/dashboard" element={<Dashboard/>}/>
+                    <Route path="/" element={<Dashboard/>}/>
                     <Route path="/members" element={<Members/>}/>
                     <Route path="/departments" element={<Departments/>}/>
                     <Route path="/attendance" element={<Attendance/>}/>
@@ -28,6 +27,7 @@ function App() {
                     <Route path="/events" element={<Events/>}/>
                     <Route path="/payroll" element={<Payroll/>}/>
                     <Route path="/settings" element={<Settings/>}/>
+                    <Route path="/signup" element={<Signup/>}/>
                 </Routes>
             </Sidebar>
         </BrowserRouter>)
