@@ -8,6 +8,7 @@ import Table from 'react-bootstrap/Table';
 
 export const Leaves = () => {
     const [employees,setEmployees] = useState([]);
+    
 
     useEffect(() => {
         fetch("https://fakestoreapi.com/products")
@@ -36,7 +37,9 @@ export const Leaves = () => {
                         <Table responsive borderless>
             <thead>
                 <tr>
-                    <th className='id-leaves'> id</th>
+                {Array.from({ length: 1 }).map((id) => (
+                    <th className='Name-leaves' key={id}>id</th>
+                ))}
                 {Array.from({ length: 1 }).map((title) => (
                     <th className='Name-leaves' key={title}>Name</th>
                 ))}
@@ -67,14 +70,21 @@ export const Leaves = () => {
                 </tr> 
             </thead>
             <tbody>
-                <tr>
-                <td>1</td>
-                {Array.from({ length: 9 }).map((id) => (
+                {/* <td>1</td> */}
+                {/* {Array.from({ length: 10 }).map((id) => (
                     <td key={id}> 
                     {EmployeesData}
                     </td>
-                ))}
-                </tr>
+                ))} */}
+            {employees.map(employee => (
+              <>
+              <tr key={employee.id}>
+                <td>{employee.id}</td>
+                <td>{employee.title}</td>
+                <td>{employee.description}</td>
+              </tr>
+              </>
+            ))}
             </tbody>
             </Table>
             </div>

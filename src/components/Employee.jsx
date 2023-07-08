@@ -3,8 +3,8 @@ import React from 'react'
 function Employee(props) {
   return (
         <div>
-            <p>{props.employee.id}</p>
-            <p>{props.employee.title}</p>
+            {/* <p>{props.employee.id}</p> */}
+            {/* <p>{props.employee.title}</p> */}
             {/* <img src={props.Employee.avatar}/><p>{props.Employee.Department_role}</p>
             <p>{props.Employee.Date}</p>
             <p>{props.Employee.Status}</p>
