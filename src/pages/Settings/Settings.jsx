@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import './settings.css'
 import { TopSearch } from "../../components/TopSerarch/TopSearch.jsx";
-import { Box, Button, Card, Container, Stack, TextField, Typography } from '@mui/material';
+import { Avatar, Box, Button, Card, Container, Stack, TextField, Typography } from '@mui/material';
 import CountrySelect from '../../components/countrySelected/CountrySelect';
+// import {avtar} from '../../assets/avatar.png'
 
 export const Settings = () => {
   const [jobs, setJobs] = useState(true)
@@ -154,6 +155,12 @@ export const Settings = () => {
               <Box sx={{ bgcolor: '#fff' }}
                 className="d-flex flex-wrap"
               >
+                {/* <Avatar 
+                className='col-md-12'
+                alt="bemy Sharp" 
+                src='src' 
+                sx={{ width: 50, height: 50 }}
+                /> */}
                 {inputs.map((input) => (
                   <>
                     {/* <label htmlFor="exampleFormControlInput1" className="form-label">{input.name}</label> */}

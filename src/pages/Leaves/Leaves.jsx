@@ -1,9 +1,8 @@
 import './leaves.css'
-import {TopSearch} from "../../components/TopSerarch/TopSearch.jsx";
+import { TopSearch } from "../../components/TopSerarch/TopSearch.jsx";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 // import { useEffect, useState } from 'react';
-import * as React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -18,47 +17,47 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 
 export const Leaves = () => {
-    // const [employees,setEmployees] = useState([]);
-    
+  // const [employees,setEmployees] = useState([]);
 
-    // useEffect(() => {
-    //     fetch("https://fakestoreapi.com/products")
-    //     .then((response) => response.json())
-    //     .then((data) => setEmployees(data))
-    // },[])
 
-    function createData(id, name, Department_role, Date, Status, Leave_from, Leave_To, Leave_Type, Reason,Action) {
-        return { id, name, Department_role, Date, Status, Leave_from, Leave_To, Leave_Type, Reason, Action };
-      }
-      
-      const rows = [
-        createData(1,"Ayman Hossam","Graphic Designer","20 Feb 2022","Pending","20 Feb 2022","20 Feb 2022","Sick","Lorem ipsum",),
-        createData(2,"Ayman Hossam","Graphic Designer","20 Feb 2022","Pending","20 Feb 2022","20 Feb 2022","Sick","Lorem ipsum",),
-        createData(3,"Ayman Hossam","Graphic Designer","20 Feb 2022","Pending","20 Feb 2022","20 Feb 2022","Sick","Lorem ipsum",),
-        createData(4,"Ayman Hossam","Graphic Designer","20 Feb 2022","Pending","20 Feb 2022","20 Feb 2022","Sick","Lorem ipsum",)
-      ];
-      
+  // useEffect(() => {
+  //     fetch("https://fakestoreapi.com/products")
+  //     .then((response) => response.json())
+  //     .then((data) => setEmployees(data))
+  // },[])
 
-    // const EmployeesData = employees.map((employee) => {
-    //     return(
-    //         <Employee key={employee.id} employee={employee}/>
-    //     );
-    // })
-    return (
-        <div className='leaves'>
-            <TopSearch/>
-            <div className='leaves-container'>
-                <Row>
-                    <Col className='leaves-header'>Leaves Request</Col>
-                    <Col>
-                        <div className='search-leaves'>
-                            <input className='leaves-search-input' type='search' placeholder='Search for Employees'/>
-                        </div>
-                    </Col>
-                    <Col></Col>
-                    <Col></Col>
-                </Row>
-                {/* <div className='Table-leaves'>
+  function createData(id, name, Department_role, Date, Status, Leave_from, Leave_To, Leave_Type, Reason, Action) {
+    return { id, name, Department_role, Date, Status, Leave_from, Leave_To, Leave_Type, Reason, Action };
+  }
+
+  const rows = [
+    createData(1, "Ayman Hossam", "Graphic Designer", "20 Feb 2022", "Pending", "20 Feb 2022", "20 Feb 2022", "Sick", "Lorem ipsum",),
+    createData(2, "Ayman Hossam", "Graphic Designer", "20 Feb 2022", "Pending", "20 Feb 2022", "20 Feb 2022", "Sick", "Lorem ipsum",),
+    createData(3, "Ayman Hossam", "Graphic Designer", "20 Feb 2022", "Pending", "20 Feb 2022", "20 Feb 2022", "Sick", "Lorem ipsum",),
+    createData(4, "Ayman Hossam", "Graphic Designer", "20 Feb 2022", "Pending", "20 Feb 2022", "20 Feb 2022", "Sick", "Lorem ipsum",)
+  ];
+
+
+  // const EmployeesData = employees.map((employee) => {
+  //     return(
+  //         <Employee key={employee.id} employee={employee}/>
+  //     );
+  // })
+  return (
+    <div className='leaves'>
+      <TopSearch />
+      <div className='leaves-container'>
+        <Row>
+          <Col className='leaves-header'>Leaves Request</Col>
+          <Col>
+            <div className='search-leaves'>
+              <input className='leaves-search-input' type='search' placeholder='Search for Employees' />
+            </div>
+          </Col>
+          <Col></Col>
+          <Col></Col>
+        </Row>
+        {/* <div className='Table-leaves'>
                         <Table responsive borderless>
             <thead>
                 <tr>
@@ -111,11 +110,11 @@ export const Leaves = () => {
             </tbody>
             </Table>
             </div> */}
-            <br/>
-                    <TableContainer component={Paper}>
-        <Table sx={{minWidth: 650 }} aria-label="simple table">
+        <br />
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
-            <TableRow>
+              <TableRow>
                 <TableCell align="left">ID</TableCell>
                 <TableCell align="left">name</TableCell>
                 <TableCell align="left">Department Role</TableCell>
@@ -126,34 +125,34 @@ export const Leaves = () => {
                 <TableCell align="left">Leave Type</TableCell>
                 <TableCell align="left">Reason</TableCell>
                 <TableCell align="left">Action</TableCell>
-            </TableRow>
+              </TableRow>
             </TableHead>
             <TableBody>
-            {rows.map((row) => (
+              {rows.map((row) => (
                 <TableRow
-                key={row.name}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                  key={row.name}
+                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
-                <TableCell component="th" scope="row">
+                  <TableCell component="th" scope="row">
                     {row.id}
-                </TableCell>
-                <TableCell align="left">{row.name}</TableCell>
-                <TableCell align="left">{row.Department_role}</TableCell>
-                <TableCell align="left">{row.Date}</TableCell>
-                <TableCell align="left">{row.Status}</TableCell>
-                <TableCell align="left">{row.Leave_from}</TableCell>
-                <TableCell align="left">{row.Leave_To}</TableCell>
-                <TableCell align="left">{row.Leave_Type}</TableCell>
-                <TableCell align="left">{row.Reason}</TableCell>
-                <TableCell align="left"><CheckCircleIcon/><ClearIcon/></TableCell>
+                  </TableCell>
+                  <TableCell align="left">{row.name}</TableCell>
+                  <TableCell align="left">{row.Department_role}</TableCell>
+                  <TableCell align="left">{row.Date}</TableCell>
+                  <TableCell align="left">{row.Status}</TableCell>
+                  <TableCell align="left">{row.Leave_from}</TableCell>
+                  <TableCell align="left">{row.Leave_To}</TableCell>
+                  <TableCell align="left">{row.Leave_Type}</TableCell>
+                  <TableCell align="left">{row.Reason}</TableCell>
+                  <TableCell align="left"><CheckCircleIcon /><ClearIcon /></TableCell>
                 </TableRow>
-            ))}
+              ))}
             </TableBody>
-        </Table>
+          </Table>
         </TableContainer>
-            </div>
-        </div>
-    )
+      </div>
+    </div>
+  )
 }
 
 
