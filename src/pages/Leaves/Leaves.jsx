@@ -82,6 +82,9 @@ export const Leaves = () => {
                 <td>{employee.id}</td>
                 <td>{employee.title}</td>
                 <td>{employee.description}</td>
+                <td>{employee.price}</td>
+                <td>{employee.category}</td>
+                <td>{employee.category}</td>
               </tr>
               </>
             ))}
