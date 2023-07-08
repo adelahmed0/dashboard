@@ -28,7 +28,7 @@
     background-color: #F4F4F4;
     display: flex;
 }
-.id-leaves,
+/* .id-leaves,
 .Name-leaves,
 .Department_Role-leaves,
 .Date-leaves,
@@ -39,7 +39,7 @@
 .Reason-leaves,
 .Action-leaves{
     color: var(--second-color) !important;
-}
+} */
 
 
 .Table-leaves{
