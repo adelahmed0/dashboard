@@ -69,7 +69,7 @@ export const Dashboard = () => {
                     </Col>
                     <Col sm={6} md={3}>
                         <Card className='cards-dashboard' border='none'>
-                            <PieChart width={220} height={150}>
+                            <PieChart width={120} height={150}>
                                 <Pie
                                     data={data}
                                     innerRadius={60}
