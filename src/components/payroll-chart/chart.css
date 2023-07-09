@@ -12,7 +12,8 @@
     /* width: 700px; */
     background-color: #fff;
     border-radius: 16px;
-    /* box-shadow: ; */
+    box-shadow: 0px 2px 10px 0px #0000001A;
+    
 }
 .payroll-data{
     display: flex;
@@ -47,11 +48,15 @@
     width:80px;
     Height:25px;
     border-radius: 25px;
-    padding:2px 10px;
+    padding:2px 5px;
     border: 1px solid #034488;
     background-color: #fff;
     font-size: 15px;
     color: #034488;
     margin-top: 8px;
+    display: flex;
 
+}
+.icon-payroll{
+    font-size: 10px;
 }

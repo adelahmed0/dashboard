@@ -5,6 +5,7 @@ import { useState,useEffect } from 'react';
 
 import PieChart from '../../components/payroll-chart/Piechart'
 import { Directions } from '@mui/icons-material';
+import PayTable from '../../components/payroll-chart/PayTable';
 
 
 
@@ -27,6 +28,7 @@ export const Payroll = () => {
            <Chart data={data}  />
            <PieChart className="payroll-pie-chart"/>
            </div>
+           <PayTable/>
             
         </div>
     )
