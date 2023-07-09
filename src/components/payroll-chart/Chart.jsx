@@ -1,5 +1,6 @@
  import "./chart.css"
  import {BsDot} from "react-icons/Bs";
+ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 import {
     BarChart,
@@ -26,12 +27,12 @@ import {
             <li><BsDot  style={{ fill: '#034488'  }}  className="payroll-Dot"  /> Gloss</li>
             <li><BsDot style={{ fill: '#00E096' }}    className="payroll-Dot "/>Taxes</li>
             <li><BsDot  style={{ fill: '#44C5E2' }}   className="payroll-Dot" />Net Salary</li>
-            <button>Yearly</button>
+            <button className="but-payroll" >Yearly <KeyboardArrowDownIcon className="icon-payroll"/></button>
           </ul>
         </div>
       </div>
 
-<ResponsiveContainer width="100%" height={250} style={{ marginLeft: '-3%' }}>
+<ResponsiveContainer width="100%" height={200} style={{ marginLeft: '-3%' }}>
         <BarChart
           data={data}
           margin={{

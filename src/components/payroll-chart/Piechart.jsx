@@ -29,7 +29,7 @@ const COLORS = ["#034488", "#769DF9", "#00E096", "#F7C343","#E45F3F"];
 
 const Piechart = () => {
     return (
-        <div style={{ width: "300px", height: 350 ,background:"#fff",margin:"0 20px"}}>
+        <div style={{ width: "300px", height: 300 ,background:"#fff",margin:"0 20px", borderRadius:"16px", boxshadow: "0px 2px 10px 0px #0000001A",}}>
           <ResponsiveContainer>
             <PieChart>
               <Pie
