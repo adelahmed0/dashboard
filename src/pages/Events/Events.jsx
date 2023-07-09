@@ -5,7 +5,7 @@ export const Events = () => {
     return (
         <div className='events'>
             <TopSearch/>
-            Events
+            Eventsttt
         </div>
     )
 }
