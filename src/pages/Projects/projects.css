@@ -27,7 +27,7 @@
 .Projects-search-input {
     padding: 9px 250px 10px 16px;
     margin-top: 1.2rem;
-    margin-left: 4rem;
+    margin-left: 2rem;
     border-radius: 16px;
     outline: none;
     border: none;
@@ -42,6 +42,7 @@
     border: 1px solid var(--second-color);
     color: var(--second-color);
     margin-top: 1.5rem;
+    margin-left: 2rem;
 }
 .projects-card{
     background-color: rgba(217, 217, 217, 0.2);
