@@ -44,10 +44,12 @@ export const Dashboard = () => {
             </div>
             <div className='mt-5'>
                 <Row className='justify-content-between'>
-                    <Col className='me-1 pt-5 mb-3' style={{backgroundColor: '#fff', borderRadius: '16px'}} md={8}>
+                    <Col className='me-1 pt-5 mb-3' style={{backgroundColor: '#fff', borderRadius: '16px'}} xs={12}
+                         sm={8}
+                         md={8}>
                         <ChartColumnDashboard/>
                     </Col>
-                    <Col className='px-4' style={{backgroundColor: '#fff', borderRadius: '16px'}} md={3}>
+                    <Col className='px-4' style={{backgroundColor: '#fff', borderRadius: '16px'}} xs={12} sm={3} md={3}>
                         <div className='dash-events py-5'>
                             <h4 style={{color: '#034488', marginBottom: '20px'}}>Events</h4>
                             <Row className='flex-column g-2'>
