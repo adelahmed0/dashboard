@@ -15,6 +15,7 @@ import {Projects} from "./pages/Projects/Projects.jsx";
 import {Events} from "./pages/Events/Events.jsx";
 import {Payroll} from "./pages/Payroll/Payroll.jsx";
 import {Settings} from "./pages/Settings/Settings.jsx";
+import {SignIn} from "./pages/Signin/SignIn.jsx";
 
 const routes = createBrowserRouter([
     {
@@ -31,7 +32,8 @@ const routes = createBrowserRouter([
             {path: 'settings', element: <Settings/>},
         ]
     },
-    {path: '/signup', element: <Signup/>}
+    {path: '/signup', element: <Signup/>},
+    {path: '/signin', element: <SignIn/>}
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>

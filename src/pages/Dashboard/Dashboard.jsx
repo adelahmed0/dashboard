@@ -8,6 +8,7 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import HikingIcon from '@mui/icons-material/Hiking';
 import {ProgressChart} from "../../components/ProgressChart/ProgressChart.jsx";
 import {ChartColumnDashboard} from "../../components/ChartColumnDashboard/ChartColumnDashboard.jsx";
+import {CardDashboard} from "../../components/CardDashboard/CardDashboard.jsx";
 
 export const Dashboard = () => {
 
@@ -16,50 +17,23 @@ export const Dashboard = () => {
             <TopSearch/>
             <div className='mt-5'>
                 <Row>
-                    <Col sm={6} md={3}>
-                        <Card className='cards-dashboard' border='none'>
-                            <span className='cards-icon' style={{
-                                backgroundColor: ' rgba(44, 128, 213, 0.70)',
-                            }}>
-                                <Diversity3Icon/>
-                            </span>
-                            <h6>Total Employees</h6>
-                            <div className='spans-dashboard'>
-                                <span className='fw-bold fs-5 me-1 text-card'>200</span>
-                                <span className='color-dashboard me-1'>/</span>
-                                <span className='color-dashboard'>200</span>
-                            </div>
-                        </Card>
+                    <Col className='mb-3' sm={6} md={3}>
+                        <CardDashboard
+                            bgColor='rgba(44, 128, 213, 0.70)' icon={<Diversity3Icon/>}
+                            title='Total Employees' numberActive='200' number='200'
+                        />
                     </Col>
-                    <Col sm={6} md={3}>
-                        <Card className='cards-dashboard' border='none'>
-                            <span className='cards-icon' style={{
-                                backgroundColor: 'rgba(255, 148, 122, 0.80)',
-                            }}>
-                                <CalendarTodayIcon/>
-                            </span>
-                            <h6>On Leave</h6>
-                            <div className='spans-dashboard'>
-                                <span className='fw-bold fs-5 me-1 text-card'>10</span>
-                                <span className='color-dashboard me-1'>/</span>
-                                <span className='color-dashboard'>200</span>
-                            </div>
-                        </Card>
+                    <Col className='mb-3' sm={6} md={3}>
+                        <CardDashboard
+                            bgColor='rgba(255, 148, 122, 0.80)' icon={<CalendarTodayIcon/>}
+                            title='On Leave' numberActive='100' number='200'
+                        />
                     </Col>
-                    <Col sm={6} md={3}>
-                        <Card className='cards-dashboard' border='none'>
-                            <span className='cards-icon' style={{
-                                backgroundColor: 'rgba(79, 209, 197, 0.70)',
-                            }}>
-                                <HikingIcon/>
-                            </span>
-                            <h6>Trainers</h6>
-                            <div className='spans-dashboard'>
-                                <span className='fw-bold fs-5 me-1 text-card'>50</span>
-                                <span className='color-dashboard me-1'>/</span>
-                                <span className='color-dashboard'>100</span>
-                            </div>
-                        </Card>
+                    <Col className='mb-3' sm={6} md={3}>
+                        <CardDashboard
+                            bgColor='rgba(79, 209, 197, 0.70)' icon={<HikingIcon/>}
+                            title='Trainers' numberActive='50' number='100'
+                        />
                     </Col>
                     <Col sm={6} md={3}>
                         <Card className='cards-dashboard d-flex flex-row' border='none'>
@@ -70,7 +44,7 @@ export const Dashboard = () => {
             </div>
             <div className='mt-5'>
                 <Row className='justify-content-between'>
-                    <Col className='me-1 pt-5' style={{backgroundColor: '#fff', borderRadius: '16px'}} md={8}>
+                    <Col className='me-1 pt-5 mb-3' style={{backgroundColor: '#fff', borderRadius: '16px'}} md={8}>
                         <ChartColumnDashboard/>
                     </Col>
                     <Col className='px-4' style={{backgroundColor: '#fff', borderRadius: '16px'}} md={3}>
@@ -132,55 +106,28 @@ export const Dashboard = () => {
             </div>
             <div className='mt-5'>
                 <Row>
-                    <Col sm={6} md={3}>
+                    <Col className='mb-3' sm={6} md={3}>
                         <Card className='cards-dashboard d-flex flex-row' border='none'>
                             <ProgressChart/>
                         </Card>
                     </Col>
-                    <Col sm={6} md={3}>
-                        <Card className='cards-dashboard' border='none'>
-                            <span className='cards-icon' style={{
-                                backgroundColor: ' rgba(44, 128, 213, 0.70)',
-                            }}>
-                                <Diversity3Icon/>
-                            </span>
-                            <h6>Total Employees</h6>
-                            <div className='spans-dashboard'>
-                                <span className='fw-bold fs-5 me-1 text-card'>200</span>
-                                <span className='color-dashboard me-1'>/</span>
-                                <span className='color-dashboard'>200</span>
-                            </div>
-                        </Card>
+                    <Col className='mb-3' sm={6} md={3}>
+                        <CardDashboard
+                            bgColor='rgba(44, 128, 213, 0.70)' icon={<Diversity3Icon/>}
+                            title='Total Employees' numberActive='200' number='200'
+                        />
                     </Col>
-                    <Col sm={6} md={3}>
-                        <Card className='cards-dashboard' border='none'>
-                            <span className='cards-icon' style={{
-                                backgroundColor: 'rgba(255, 148, 122, 0.80)',
-                            }}>
-                                <CalendarTodayIcon/>
-                            </span>
-                            <h6>On Leave</h6>
-                            <div className='spans-dashboard'>
-                                <span className='fw-bold fs-5 me-1 text-card'>10</span>
-                                <span className='color-dashboard me-1'>/</span>
-                                <span className='color-dashboard'>200</span>
-                            </div>
-                        </Card>
+                    <Col className='mb-3' sm={6} md={3}>
+                        <CardDashboard
+                            bgColor='rgba(255, 148, 122, 0.80)' icon={<CalendarTodayIcon/>}
+                            title='On Leave' numberActive='100' number='200'
+                        />
                     </Col>
-                    <Col sm={6} md={3}>
-                        <Card className='cards-dashboard' border='none'>
-                            <span className='cards-icon' style={{
-                                backgroundColor: 'rgba(79, 209, 197, 0.70)',
-                            }}>
-                                <HikingIcon/>
-                            </span>
-                            <h6>Trainers</h6>
-                            <div className='spans-dashboard'>
-                                <span className='fw-bold fs-5 me-1 text-card'>50</span>
-                                <span className='color-dashboard me-1'>/</span>
-                                <span className='color-dashboard'>100</span>
-                            </div>
-                        </Card>
+                    <Col className='mb-3' sm={6} md={3}>
+                        <CardDashboard
+                            bgColor='rgba(79, 209, 197, 0.70)' icon={<HikingIcon/>}
+                            title='Trainers' numberActive='50' number='100'
+                        />
                     </Col>
                 </Row>
             </div>

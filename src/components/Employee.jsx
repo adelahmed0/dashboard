@@ -1,7 +1,7 @@
 import React from 'react'
 
-function Employee(props) {
-  return (
+function Employee({}) {
+    return (
         <div>
             <p>{props.employee.id}</p>
             <p>{props.employee.title}</p>
