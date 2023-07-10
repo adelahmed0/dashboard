@@ -213,13 +213,6 @@ const columns = useMemo(
       <div className='leaves-container'>
         <Row>
           <Col className='leaves-header'>Leaves Request</Col>
-          <Col>
-            <div className='search-leaves'>
-              <input className='leaves-search-input' type='search' placeholder='Search for Employees' />
-            </div>
-          </Col>
-          <Col></Col>
-          <Col></Col>
         </Row>
         <br />
         <MaterialReactTable

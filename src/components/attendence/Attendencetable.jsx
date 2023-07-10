@@ -202,11 +202,7 @@ function Attendencetable() {
             <div className='attendence-container'>
                 <Row>
                     <Col className='attendence-header'>Attendence</Col>
-                    <Col>
-                        <div className='search-attendence'>
-                            <input className='attendence-search-input' type='search' placeholder='Search for attendences'/>
-                        </div>
-                    </Col>
+                    <Col></Col>
                     <Col></Col>
                     <Col><input className='Date-Attendence' type='date'/></Col>
 
