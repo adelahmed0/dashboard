@@ -4,7 +4,7 @@ import Chart from '../../components/payroll-chart/Chart'
 import { useState,useEffect } from 'react';
 
 import PieChart from '../../components/payroll-chart/Piechart'
-import { Directions } from '@mui/icons-material';
+// import { Directions } from '@mui/icons-material';
 import PayTable from '../../components/payroll-chart/PayTable';
 
 

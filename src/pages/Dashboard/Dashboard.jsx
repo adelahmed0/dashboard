@@ -8,12 +8,14 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import HikingIcon from '@mui/icons-material/Hiking';
 import {ProgressChart} from "../../components/ProgressChart/ProgressChart.jsx";
 import {ChartColumnDashboard} from "../../components/ChartColumnDashboard/ChartColumnDashboard.jsx";
+import PrimarySearchAppBar from '../../components/TopSerarch/PrimarySearchAppBar';
 
 export const Dashboard = () => {
 
     return (
         <div className='dashboard'>
-            <TopSearch/>
+            {/* <TopSearch/> */}
+            <PrimarySearchAppBar/>
             <div className='mt-5'>
                 <Row>
                     <Col sm={6} md={3}>

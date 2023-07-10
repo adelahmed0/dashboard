@@ -8,13 +8,14 @@ import {NavLink} from "react-router-dom";
 import Diversity2Icon from '@mui/icons-material/Diversity2';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import SettingsIcon from '@mui/icons-material/Settings';
-import './root.css'
 import logo from '../../assets/logo.png'
 import LogoutIcon from '@mui/icons-material/Logout';
 import {useState} from "react";
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import {Outlet} from "react-router-dom";
+import { Toolbar } from '@mui/material';
+import './root.css'
 
 const Root = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -71,6 +72,9 @@ const Root = () => {
     ]
     return (
         <div className='d-flex'>
+
+            
+
             <div className="sidebar" style={{width: isOpen ? "240px" : "60px"}}>
                 <div className="top_section" style={{padding: isOpen ? '20px 15px' : '20px 18px'}}>
                     <div className="logo" style={{display: isOpen ? "block" : "none"}}>
@@ -100,7 +104,7 @@ const Root = () => {
                 </button>
             </div>
             <Container fluid='md'>
-                <main className='content-pages mt-5'><Outlet/></main>
+                <main className='content-pages mt-2'><Outlet/></main>
             </Container>
         </div>
     );
