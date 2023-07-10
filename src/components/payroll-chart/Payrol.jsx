@@ -1,4 +1,5 @@
 import {Chart} from "react-google-charts"
+import "./chart.css"
 
 const Payrol = () => {
     const data = [
@@ -10,13 +11,15 @@ const Payrol = () => {
         ["Sleep", 7],
     ];
     return (
-        <Chart
+       <div className="payroll-piechart">
+            <Chart
             chartType="PieChart"
             data={data}
             // options={options}
             width={"100%"}
-            height={"400px"}
-        />
+            height={"300px"}
+            />
+         </div>
     )
 }
 export default Payrol
