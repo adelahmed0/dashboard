@@ -1,87 +1,247 @@
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import * as React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import {useMemo} from 'react';
+import {MaterialReactTable} from 'material-react-table';
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import ViewerMember from '../attendence/ViewerMember.jsx'
 
 function Attendencetable() {
 
-    function createData(Emp_ID, Emp_name, Department_name, Date, Check_in, Check_out, Production , Status, Overtime,Details) {
-        return {Emp_ID, Emp_name, Department_name, Date, Check_in, Check_out, Production, Status, Overtime, Details};
-      }
-      
-      const rows = [
-        createData(1,"Sara Wael","Ali Mohamed","15/6/2023","-","-","-","Absent","-"),
-        createData(2,"Sara Wael","Ali Mohamed","15/6/2023","09:00 AM","-","9 Hrs","Present","2 Hrs"),
-        createData(2,"Sara Wael","Ali Mohamed","15/6/2023","-","09:00 AM","9 Hrs","Absent","-"),
-        createData(3,"Sara Wael","Ali Mohamed","15/6/2023","06:00 AM","09:00 AM","-","Late","3 Hrs"),
-        createData(4,"Sara Wael","Ali Mohamed","15/6/2023","09:00 AM","-","-","Present","-"),
-        createData(5,"Sara Wael","Ali Mohamed","15/6/2023","09:00 AM","-","-","Present","-"),
-        createData(6,"Sara Wael","Ali Mohamed","15/6/2023","09:00 AM","-","-","Present","-"),
-        createData(7,"Sara Wael","Ali Mohamed","15/6/2023","09:00 AM","-","-","Present","-")
-
-      ];
+    const data = [
+        {
+            EmpID: 1,
+            EmpName: 'Sara Wael',
+            DeptName: 'Ali Mohamed',
+            Date: '15/6/2023',
+            CheckIn: '-',
+            CheckOut: "-",
+            Production: '-',
+            Status: 'Absent',
+            Overtime: '-',
+            Details: <><button className='Attendence-btn'>view</button></>
+        },
+        {
+            EmpID: 2,
+            EmpName: 'Kareem Ali',
+            DeptName: 'Asmaa Omar',
+            Date: '15/6/2023',
+            CheckIn: '09:00 AM',
+            CheckOut: "06:00 PM",
+            Production: '9 Hrs',
+            Status: 'Present',
+            Overtime: '2 Hrs',
+            Details: <><button className='Attendence-btn'>view</button></>
+        },
+        {
+            EmpID: 3,
+            EmpName: 'Kareem Ali',
+            DeptName: 'Asmaa Omar',
+            Date: '15/6/2023',
+            CheckIn: '09:00 AM',
+            CheckOut: "06:00 PM",
+            Production: '9 Hrs',
+            Status: 'Present',
+            Overtime: '2 Hrs',
+            Details: <><button className='Attendence-btn'>view</button></>
+        },
+        {
+            EmpID: 4,
+            EmpName: 'Sara Wael',
+            DeptName: 'Ali Mohamed',
+            Date: '15/6/2023',
+            CheckIn: '-',
+            CheckOut: "-",
+            Production: '-',
+            Status: 'Absent',
+            Overtime: '-',
+            Details: <><button className='Attendence-btn'>view</button></>
+        },
+        {
+            EmpID: 5,
+            EmpName: 'Kareem Ali',
+            DeptName: 'Asmaa Omar',
+            Date: '15/6/2023',
+            CheckIn: '09:00 AM',
+            CheckOut: "06:00 PM",
+            Production: '9 Hrs',
+            Status: 'Present',
+            Overtime: '2 Hrs',
+            Details: <><button className='Attendence-btn'>view</button></>
+        },
+        {
+            EmpID: 6,
+            EmpName: 'Kareem Ali',
+            DeptName: 'Asmaa Omar',
+            Date: '15/6/2023',
+            CheckIn: '09:00 AM',
+            CheckOut: "06:00 PM",
+            Production: '9 Hrs',
+            Status: 'Present',
+            Overtime: '2 Hrs',
+            Details: <><button className='Attendence-btn'>view</button></>
+        },
+        {
+            EmpID: 7,
+            EmpName: 'Sara Wael',
+            DeptName: 'Ali Mohamed',
+            Date: '15/6/2023',
+            CheckIn: '-',
+            CheckOut: "-",
+            Production: '-',
+            Status: 'Absent',
+            Overtime: '-',
+            Details: <><button className='Attendence-btn'>view</button></>
+        },
+        {
+            EmpID: 8,
+            EmpName: 'Sara Wael',
+            DeptName: 'Ali Mohamed',
+            Date: '15/6/2023',
+            CheckIn: '-',
+            CheckOut: "-",
+            Production: '-',
+            Status: 'Absent',
+            Overtime: '-',
+            Details: <><button className='Attendence-btn'>view</button></>
+        },
+        {
+            EmpID: 9,
+            EmpName: 'Kareem Ali',
+            DeptName: 'Asmaa Omar',
+            Date: '15/6/2023',
+            CheckIn: '09:00 AM',
+            CheckOut: "03:00 PM",
+            Production: '6 Hrs',
+            Status: 'Present',
+            Overtime: '-',
+            Details: <><button className='Attendence-btn'>view</button></>
+        },
+        {
+            EmpID: 10,
+            EmpName: 'Sara Wael',
+            DeptName: 'Ali Mohamed',
+            Date: '15/6/2023',
+            CheckIn: '-',
+            CheckOut: "-",
+            Production: '-',
+            Status: 'Absent',
+            Overtime: '-',
+            Details: <><button className='Attendence-btn'>view</button></>
+        },
+        {
+            EmpID: 11,
+            EmpName: 'Sara Wael',
+            DeptName: 'Ali Mohamed',
+            Date: '15/6/2023',
+            CheckIn: '-',
+            CheckOut: "-",
+            Production: '-',
+            Status: 'Absent',
+            Overtime: '-',
+            Details: <><button className='Attendence-btn'>view</button></>
+        },
+        
+    ];
+    const columns = useMemo(
+        () => [
+            {
+                accessorKey: 'EmpID', //access nested data with dot notation
+                header: 'Emp ID',
+                size: 150,
+            },
+            {
+                accessorKey: 'EmpName', //access nested data with dot notation
+                header: 'Emp. Name',
+                size: 150,
+            },
+            {
+                accessorKey: 'DeptName',
+                header: 'Dept. Name',
+                size: 150,
+            },
+            {
+                accessorKey: 'Date', //normal accessorKey
+                header: 'Date',
+                size: 200,
+            },
+            {
+                accessorKey: 'CheckIn',
+                header: 'Check in',
+                size: 150,
+            },
+            {
+                accessorKey: 'CheckOut',
+                header: 'Check out',
+                size: 150,
+            },
+            {
+                accessorKey: 'Production',
+                header: 'Production',
+                size: 150,
+            },
+            {
+                accessorKey: 'Status',
+                header: 'Status',
+                size: 150,
+            },
+            {
+                accessorKey: 'Overtime',
+                header: 'Overtime',
+                size: 150,
+            },
+            {
+                accessorKey: 'Details',
+                header: 'Details',
+                size: 150,
+            }
+        ],
+        [],
+    );
 
   return (
     <div>
             <div className='attendence-container'>
                 <Row>
                     <Col className='attendence-header'>Attendence</Col>
-                    <Col>
-                        <div className='search-attendence'>
-                            <input className='attendence-search-input' type='search' placeholder='Search for attendences'/>
-                        </div>
-                    </Col>
+                    <Col></Col>
                     <Col></Col>
                     <Col><input className='Date-Attendence' type='date'/></Col>
 
                 </Row>
             <br/>
-                    <TableContainer component={Paper}>
-        <Table sx={{minWidth: 650 }} aria-label="simple table">
-            <TableHead>
-            <TableRow>
-                <TableCell align="left">Emp ID</TableCell>
-                <TableCell align="left">Emp. Name</TableCell>
-                <TableCell align="left">Dept. Name</TableCell>
-                <TableCell align="left">Date</TableCell>
-                <TableCell align="left">Check in</TableCell>
-                <TableCell align="left">Check Out</TableCell>
-                <TableCell align="left">Production</TableCell>
-                <TableCell align="left">Status</TableCell>
-                <TableCell align="left">Overtime</TableCell>
-                <TableCell align="left">Details</TableCell>
-            </TableRow>
-            </TableHead>
-            <TableBody>
-            {rows.map((row) => (
-                <TableRow
-                key={row.name}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                >
-                <TableCell component="th" scope="row">
-                    {row.Emp_ID}
-                </TableCell>
-                <TableCell align="left">{row.Emp_name}</TableCell>
-                <TableCell align="left">{row.Department_name}</TableCell>
-                <TableCell align="left">{row.Date}</TableCell>
-                <TableCell align="left">{row.Check_in}</TableCell>
-                <TableCell align="left">{row.Check_out}</TableCell>
-                <TableCell align="left">{row.Production}</TableCell>
-                <TableCell align="left">{row.Status}</TableCell>
-                <TableCell align="left">{row.Overtime}</TableCell>
-                <TableCell align="left"><button className='Attendence-btn'>view</button></TableCell>
-                </TableRow>
-            ))}
-            </TableBody>
-        </Table>
-        </TableContainer>
+            <MaterialReactTable
+                muiSelectCheckboxProps={{
+                    sx: {
+                        color: '#034488'
+                    } //makes all checkboxes use the secondary color
+                }}
+                enableRowSelection={true}
+                columns={columns} data={data}
+                muiTableHeadCellProps={{
+                    sx: {
+                        fontSize: {
+                            xs: '10px',
+                            sm: '11px',
+                            md: '12px',
+                            lg: '16px',
+                            xl: '14px',
+                        },
+                        color: '#034488',
+                    },
+                }}
+                muiSelectAllCheckboxProps={{
+                    sx: {
+                        color: '#034488',
+                    }
+                }}
+                muiTableBodyProps={{
+                    sx: {color: '#034488'}
+                }}
+                muiTableBodyCellProps={{
+                    sx: {
+                        color: '#034488'
+                    }
+                }}
+            />
             </div>
         <ViewerMember/>
 
@@ -90,3 +250,5 @@ function Attendencetable() {
 }
 
 export default Attendencetable;
+
+

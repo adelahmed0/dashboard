@@ -1,14 +1,16 @@
 import './leaves.css'
 import {TopSearch} from "../../components/TopSerarch/TopSearch.jsx";
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import {useMemo} from 'react';
+// import Table from '@mui/material/Table';
+// import TableBody from '@mui/material/TableBody';
+// import TableCell from '@mui/material/TableCell';
+// import TableContainer from '@mui/material/TableContainer';
+// import TableHead from '@mui/material/TableHead';
+// import TableRow from '@mui/material/TableRow';
+// import Paper from '@mui/material/Paper';
+import {MaterialReactTable} from 'material-react-table';
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import ClearIcon from '@mui/icons-material/Clear';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 // import Employee from '../../components/Employee.jsx';
@@ -18,17 +20,192 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 export const Leaves = () => {
 
 
-  function createData(id, name, Department_role, Date, Status, Leave_from, Leave_To, Leave_Type, Reason, Action) {
-    return { id, name, Department_role, Date, Status, Leave_from, Leave_To, Leave_Type, Reason, Action };
-  }
+  const data = [
+    {
+        id: 1,
+        name: 'Ahmed Khaled',
+        departmentrole: 'Graphic Designer',
+        date: '20 Feb 2022',
+        status: 'Pending',
+        LeaveFrom: "20 Feb 2022",
+        LeaveTo: '20 Feb 2022',
+        LeaveType: 'Sick',
+        Reasons: 'Lorem ipsum dod',
+        action: <><CheckCircleIcon/><ClearIcon/></>
+    },
+    {
+        id: 2,
+        name: 'Ahmed Khaled',
+        departmentrole: 'Graphic Designer',
+        date: '20 Feb 2022',
+        status: 'Approved',
+        LeaveFrom: "20 Feb 2022",
+        LeaveTo: '20 Feb 2022',
+        LeaveType: 'Paid',
+        Reasons: 'none',
+        action: <><CheckCircleIcon/><ClearIcon/></>
+    },
+    {
+        id: 3,
+        name: 'Ahmed Khaled',
+        departmentrole: 'Graphic Designer',
+        date: '20 Feb 2022',
+        status: 'Reject',
+        LeaveFrom: "20 Feb 2022",
+        LeaveTo: '20 Feb 2022',
+        LeaveType: 'Sick',
+        Reasons: 'Lorem ipsum dod',
+        action: <><CheckCircleIcon/><ClearIcon/></>
+    },
+    {
+        id: 4,
+        name: 'Ahmed Khaled',
+        departmentrole: 'Graphic Designer',
+        date: '20 Feb 2022',
+        status: 'Pending',
+        LeaveFrom: "20 Feb 2022",
+        LeaveTo: '20 Feb 2022',
+        LeaveType: 'Sick',
+        Reasons: 'Lorem ipsum dod',
+        action: <><CheckCircleIcon/><ClearIcon/></>
+    },
+    {
+        id: 5,
+        name: 'Ahmed Khaled',
+        departmentrole: 'Graphic Designer',
+        date: '20 Feb 2022',
+        status: 'Pending',
+        LeaveFrom: "20 Feb 2022",
+        LeaveTo: '20 Feb 2022',
+        LeaveType: '20 Feb 2022',
+        Reasons: 'Sick',
+        action: <><CheckCircleIcon/><ClearIcon/></>
+    },
+    {
+        id: 6,
+        name: 'Ahmed Khaled',
+        departmentrole: 'Graphic Designer',
+        date: '20 Feb 2022',
+        status: 'Pending',
+        LeaveFrom: "20 Feb 2022",
+        LeaveTo: '20 Feb 2022',
+        LeaveType: 'Sick',
+        Reasons: 'Lorem ipsum dod',
+        action: <><CheckCircleIcon/><ClearIcon/></>
+    },
+    {
+        id: 7,
+        name: 'Ahmed Khaled',
+        departmentrole: 'Graphic Designer',
+        date: '20 Feb 2022',
+        status: 'Pending',
+        LeaveFrom: "20 Feb 2022",
+        LeaveTo: '20 Feb 2022',
+        LeaveType: '20 Feb 2022',
+        Reasons: 'Sick',
+        action: <><CheckCircleIcon/><ClearIcon/></>
+    },
+    {
+        id: 8,
+        name: 'Ahmed Khaled',
+        departmentrole: 'Graphic Designer',
+        date: '20 Feb 2022',
+        status: 'Pending',
+        LeaveFrom: "20 Feb 2022",
+        LeaveTo: '20 Feb 2022',
+        LeaveType: '20 Feb 2022',
+        Reasons: 'Sick',
+        action: <><CheckCircleIcon/><ClearIcon/></>
+    },
+    {
+        id: 9,
+        name: 'Ahmed Khaled',
+        departmentrole: 'Graphic Designer',
+        date: '20 Feb 2022',
+        status: 'Pending',
+        LeaveFrom: "20 Feb 2022",
+        LeaveTo: '20 Feb 2022',
+        LeaveType: '20 Feb 2022',
+        Reasons: 'Sick',
+        action: <><CheckCircleIcon/><ClearIcon/></>
+    },
+    {
+        id: 10,
+        name: 'Ahmed Khaled',
+        departmentrole: 'Graphic Designer',
+        date: '20 Feb 2022',
+        status: 'Pending',
+        LeaveFrom: "20 Feb 2022",
+        LeaveTo: '20 Feb 2022',
+        LeaveType: 'Paid',
+        Reasons: 'none',
+        action: <><CheckCircleIcon/><ClearIcon/></>
+    },
+    {
+        id: 11,
+        name: 'Ahmed Khaled',
+        departmentrole: 'Graphic Designer',
+        date: '20 Feb 2022',
+        status: 'Pending',
+        LeaveFrom: "20 Feb 2022",
+        LeaveTo: '20 Feb 2022',
+        LeaveType: 'Paid',
+        Reasons: 'none',
+        action: <><CheckCircleIcon/><ClearIcon/></>
+    },
 
-  const rows = [
-    createData(1, "Ayman Hossam", "Graphic Designer", "20 Feb 2022", "Pending", "20 Feb 2022", "20 Feb 2022", "Sick", "Lorem ipsum",),
-    createData(2, "Ayman Hossam", "Graphic Designer", "20 Feb 2022", "Pending", "20 Feb 2022", "20 Feb 2022", "Sick", "Lorem ipsum",),
-    createData(3, "Ayman Hossam", "Graphic Designer", "20 Feb 2022", "Pending", "20 Feb 2022", "20 Feb 2022", "Sick", "Lorem ipsum",),
-    createData(4, "Ayman Hossam", "Graphic Designer", "20 Feb 2022", "Pending", "20 Feb 2022", "20 Feb 2022", "Sick", "Lorem ipsum",)
-  ];
-
+    
+];
+const columns = useMemo(
+    () => [
+        {
+            accessorKey: 'id', //access nested data with dot notation
+            header: 'Id',
+            size: 150,
+        },
+        {
+            accessorKey: 'name', //access nested data with dot notation
+            header: 'Name',
+            size: 150,
+        },
+        {
+            accessorKey: 'departmentrole',
+            header: 'Department Role',
+            size: 150,
+        },
+        {
+            accessorKey: 'status',
+            header: 'Status',
+            size: 150,
+        },
+        {
+            accessorKey: 'LeaveFrom',
+            header: 'Leave From',
+            size: 150,
+        },
+        {
+            accessorKey: 'LeaveTo', //normal accessorKey
+            header: 'Leave To',
+            size: 200,
+        },
+        {
+            accessorKey: 'LeaveType',
+            header: 'Leave Type',
+            size: 150,
+        },
+        {
+          accessorKey: 'Reasons', //normal accessorKey
+          header: 'Reasons',
+          size: 200,
+        },
+        {
+          accessorKey: 'action', //normal accessorKey
+          header: 'Action',
+          size: 200,
+        },
+    ],
+    [],
+);
 
   return (
     <div className='leaves'>
@@ -36,54 +213,43 @@ export const Leaves = () => {
       <div className='leaves-container'>
         <Row>
           <Col className='leaves-header'>Leaves Request</Col>
-          <Col>
-            <div className='search-leaves'>
-              <input className='leaves-search-input' type='search' placeholder='Search for Employees' />
-            </div>
-          </Col>
-          <Col></Col>
-          <Col></Col>
         </Row>
         <br />
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
-            <TableHead>
-              <TableRow>
-                <TableCell align="left">ID</TableCell>
-                <TableCell align="left">name</TableCell>
-                <TableCell align="left">Department Role</TableCell>
-                <TableCell align="left">Date</TableCell>
-                <TableCell align="left">Status</TableCell>
-                <TableCell align="left">Leave From</TableCell>
-                <TableCell align="left">Leave To</TableCell>
-                <TableCell align="left">Leave Type</TableCell>
-                <TableCell align="left">Reason</TableCell>
-                <TableCell align="left">Action</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows.map((row) => (
-                <TableRow
-                  key={row.name}
-                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                >
-                  <TableCell component="th" scope="row">
-                    {row.id}
-                  </TableCell>
-                  <TableCell align="left">{row.name}</TableCell>
-                  <TableCell align="left">{row.Department_role}</TableCell>
-                  <TableCell align="left">{row.Date}</TableCell>
-                  <TableCell align="left">{row.Status}</TableCell>
-                  <TableCell align="left">{row.Leave_from}</TableCell>
-                  <TableCell align="left">{row.Leave_To}</TableCell>
-                  <TableCell align="left">{row.Leave_Type}</TableCell>
-                  <TableCell align="left">{row.Reason}</TableCell>
-                  <TableCell align="left"><CheckCircleIcon /><ClearIcon /></TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
+        <MaterialReactTable
+                muiSelectCheckboxProps={{
+                    sx: {
+                        color: '#034488'
+                    } //makes all checkboxes use the secondary color
+                }}
+                enableRowSelection={true}
+                columns={columns} data={data}
+                muiTableHeadCellProps={{
+                    sx: {
+                        fontSize: {
+                            xs: '10px',
+                            sm: '11px',
+                            md: '12px',
+                            lg: '16px',
+                            xl: '14px',
+                        },
+                        color: '#034488',
+                    },
+                }}
+                muiSelectAllCheckboxProps={{
+                    sx: {
+                        color: '#034488',
+                    }
+                }}
+                muiTableBodyProps={{
+                    sx: {color: '#034488'}
+                }}
+                muiTableBodyCellProps={{
+                    sx: {
+                        color: '#034488'
+                    }
+                }}
+                
+            />
       </div>
     </div>
   )
