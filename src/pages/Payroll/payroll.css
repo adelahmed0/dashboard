@@ -3,6 +3,17 @@
     margin: 0;
 
 }
+/* .payroll-two-cards{
+    display:'flex';
+     flex-direction:row;
+     flex-Wrap:wrap;
+     justify-Content:space-between;
+     margin-top:20px;
+
+} */
+/* .payroll{
+    overflow: hidden;
+} */
 @media(max-width:786px){
     .payroll-two-cards{
         display: flex;
@@ -13,3 +24,5 @@
         margin-top: 10%;
     }
 }
+
+/* style={{display:'flex', flexDirections:'row',flexWrap:'wrap',justifyContent:'space-between',marginTop:"20px"}} */
