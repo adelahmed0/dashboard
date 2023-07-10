@@ -1,5 +1,5 @@
 import './progresschart.css';
-// import {Cell, Pie, PieChart} from "recharts";
+// import {Cell, Pie, Payrol} from "recharts";
 import {Chart} from "react-google-charts";
 
 

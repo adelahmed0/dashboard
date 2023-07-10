@@ -5,6 +5,7 @@ import {useState, useEffect} from 'react';
 import PieChart from '../../components/payroll-chart/Piechart'
 import PayTable from '../../components/payroll-chart/PayTable';
 import PrimarySearchAppBar from "../../components/TopSerarch/PrimarySearchAppBar.jsx";
+import Payrol from "../../components/payroll-chart/Payrol.jsx";
 
 
 export const Payroll = () => {
@@ -23,7 +24,7 @@ export const Payroll = () => {
             <PrimarySearchAppBar/>
             <div className="d-flex flex-wrap justify-content-between mt-4">
                 <Chart data={data}/>
-                <PieChart className="payroll-pie-chart"/>
+                <Payrol/>
             </div>
             <PayTable/>
 
