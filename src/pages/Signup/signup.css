@@ -18,7 +18,7 @@
 }
 
 .image-signup img {
-    width: 100%;
+    width: 80%;
     height: 80%;
     /* margin-top: 10%; */
 
@@ -56,7 +56,7 @@
     color: #2B3674;
     font: 15px;
     font-weight: 300px;
-    background-color: #c7d8ff ;
+    background-color: #c7d8ff;
     /* margin-left: 10%; */
 }
 
@@ -160,7 +160,8 @@ hr {
     color: #2B3674;
     font-weight: bold;
 }
-/* 
+
+/*
 .form .rights {
 
     float: right;
@@ -204,10 +205,11 @@ hr {
     img {
         width: 100%;
     }
-    .image-signup{
+
+    .image-signup {
         display: none;
     }
-    
+
     .sign {
         margin-top: 38%;
         width: 100%;
@@ -227,7 +229,6 @@ hr {
         width: 350px;
         margin: auto;
     } */
-
     .sign h1, .sign p {
         text-align: center;
     }
@@ -235,7 +236,6 @@ hr {
     /* .sign button {
         margin-left: 30px;
     } */
-
     /* .button{
         width:350px;
         margin: auto;
