@@ -29,3 +29,23 @@
 .spans-dashboard .text-card {
     color: var(--second-color);
 }
+
+.dash-events .dash-event-card .dash-date {
+    background-color: #E7EBEE;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+.dash-events .dash-event-card p {
+    color: #979797;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.dash-events .dash-event-card h6 {
+    font-size: 13px;
+    font-weight: bold;
+}

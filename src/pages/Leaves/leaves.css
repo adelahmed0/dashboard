@@ -28,18 +28,7 @@
     background-color: #F4F4F4;
     display: flex;
 }
-.id-leaves,
-.Name-leaves,
-.Department_Role-leaves,
-.Date-leaves,
-.Status-leaves,
-.Leave_From-leaves,
-.Leave_To-leaves,
-.Leave_Type-leaves,
-.Reason-leaves,
-.Action-leaves{
-    color: var(--second-color) !important;
-}
+
 
 
 .Table-leaves{
