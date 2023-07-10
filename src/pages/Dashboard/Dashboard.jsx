@@ -1,5 +1,4 @@
 import './dashboard.css'
-import {TopSearch} from "../../components/TopSerarch/TopSearch.jsx";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
@@ -9,12 +8,13 @@ import HikingIcon from '@mui/icons-material/Hiking';
 import {ProgressChart} from "../../components/ProgressChart/ProgressChart.jsx";
 import {ChartColumnDashboard} from "../../components/ChartColumnDashboard/ChartColumnDashboard.jsx";
 import {CardDashboard} from "../../components/CardDashboard/CardDashboard.jsx";
+import PrimarySearchAppBar from "../../components/TopSerarch/PrimarySearchAppBar.jsx";
 
 export const Dashboard = () => {
 
     return (
         <div className='dashboard'>
-            <TopSearch/>
+            <PrimarySearchAppBar/>
             <div className='mt-5'>
                 <Row>
                     <Col className='mb-3' sm={6} md={3}>

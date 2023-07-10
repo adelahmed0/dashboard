@@ -100,7 +100,7 @@ const Root = () => {
                 </button>
             </div>
             <Container fluid='md overflow-hidden'>
-                <main className='content-pages mt-5'><Outlet/></main>
+                <main className='content-pages mt-2 mb-2'><Outlet/></main>
             </Container>
         </div>
     );

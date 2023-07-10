@@ -1,11 +1,11 @@
 import './departments.css'
-import {TopSearch} from "../../components/TopSerarch/TopSearch.jsx";
 import EnhancedTable from '../../components/table/EnhancedTable';
+import PrimarySearchAppBar from "../../components/TopSerarch/PrimarySearchAppBar.jsx";
 
 export const Departments = () => {
     return (
         <div className='departments'>
-            <TopSearch/>
+            <PrimarySearchAppBar/>
             <EnhancedTable/>
         </div>
     )
