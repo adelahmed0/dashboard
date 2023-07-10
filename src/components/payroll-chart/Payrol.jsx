@@ -11,7 +11,7 @@ const Payrol = () => {
         ["Sleep", 7],
     ];
     return (
-       <div className="payroll-piechart">
+       <div className="payroll-piechart col-md-6">
             <Chart
             chartType="PieChart"
             data={data}

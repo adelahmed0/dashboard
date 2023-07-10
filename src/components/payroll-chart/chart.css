@@ -72,12 +72,13 @@
      border-radius:16px;
      box-shadow: 0px 2px 10px 0px #0000001A;
      overflow: hidden;
+     text-align: center;
 }
 
 @media(max-width:768px){
 .payroll-piechart{
     margin-top:45px ;
-    /* width: 100%; */
+    width: 100%;
 
 }
 }
