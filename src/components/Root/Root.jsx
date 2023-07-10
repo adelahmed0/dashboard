@@ -99,7 +99,7 @@ const Root = () => {
                     <span><LogoutIcon/></span> Log out
                 </button>
             </div>
-            <Container fluid='md overflow-hidden'>
+            <Container fluid='md ' className='overflow-hidden'>
                 <main className='content-pages mt-5'><Outlet/></main>
             </Container>
         </div>
