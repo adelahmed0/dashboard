@@ -12,7 +12,7 @@
 .sidebar {
     background: #fff;
     /*color: #A3AED0;*/
-    height: 100vh;
+    height: inherit;
     width: 250px;
     text-align: center;
     transition: all 0.5s;

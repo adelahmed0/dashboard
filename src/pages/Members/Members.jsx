@@ -1,8 +1,8 @@
 import './members.css'
-import {TopSearch} from "../../components/TopSerarch/TopSearch.jsx";
 import AddEmployee from "../../components/AddEmployee/AddEmployee.jsx";
 import {useState} from "react";
 import {AllEmployees} from "../../components/AllEmployees/AllEmployees.jsx";
+import PrimarySearchAppBar from "../../components/TopSerarch/PrimarySearchAppBar.jsx";
 
 export const Members = () => {
 
@@ -12,7 +12,7 @@ export const Members = () => {
     }
     return (
         <div className='members'>
-            <TopSearch/>
+            <PrimarySearchAppBar/>
             {
                 addEmployee ? <AddEmployee handleShow={handleShow}/> : <AllEmployees handleShow={handleShow}/>
             }

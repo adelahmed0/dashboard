@@ -1,11 +1,10 @@
 import './events.css'
-import {TopSearch} from "../../components/TopSerarch/TopSearch.jsx";
+import PrimarySearchAppBar from "../../components/TopSerarch/PrimarySearchAppBar.jsx";
 
 export const Events = () => {
     return (
         <div className='events'>
-            <TopSearch/>
-            Events component
+            <PrimarySearchAppBar/>
         </div>
     )
 }
