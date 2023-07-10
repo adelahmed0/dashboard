@@ -104,7 +104,7 @@ const Root = () => {
                 </button>
             </div>
             <Container fluid='md'>
-                <main className='content-pages mt-2'><Outlet/></main>
+                <main className='content-pages overflow-hidden'><Outlet/></main>
             </Container>
         </div>
     );
