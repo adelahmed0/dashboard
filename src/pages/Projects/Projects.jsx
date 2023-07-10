@@ -266,12 +266,12 @@ export const Projects = () => {
                                 <Row>
                                 <div style={{display:"flex"}}>
                                     <Col>
-                                    <div className='card-progress-completed'>
-                                        <div className='progress-completed'></div>
+                                    <div className='card-progress-bar'>
+                                        <div className='progress'></div>
                                     </div>
                                     </Col>
                                     <Col><p style={{color:"rgba(3, 68, 136, 0.3)"}}>30%</p></Col>
-                                </div>
+                                    </div>
                                 </Row>
                             </Card.Body>
                         </Card>
@@ -325,8 +325,8 @@ export const Projects = () => {
                                 <Row>
                                 <div style={{display:"flex"}}>
                                     <Col>
-                                    <div className='card-progress-completed'>
-                                        <div className='progress-completed'></div>
+                                    <div className='card-progress-bar'>
+                                        <div className='progress'></div>
                                     </div>
                                     </Col>
                                     <Col><p style={{color:"rgba(3, 68, 136, 0.3)"}}>30%</p></Col>
@@ -388,7 +388,7 @@ export const Projects = () => {
                                         <div className='progress-completed'></div>
                                     </div>
                                     </Col>
-                                    <Col><p style={{color:"rgba(3, 68, 136, 0.3)"}}>30%</p></Col>
+                                    <Col><p style={{color:"rgba(3, 198, 85, 1)"}}>100%</p></Col>
                                 </div>
                                 </Row>
                             </Card.Body>
