@@ -2,6 +2,7 @@ import React from 'react'
 import Bullet from './Bullet';
 import CustomLabel from './CustomLabel';
 import CustomizedLegend from './CustomizedLegend';
+import "./chart.css"
 
 import {
   PieChart,
@@ -26,10 +27,10 @@ const data01 = [
 
 const COLORS = ["#034488", "#769DF9", "#00E096", "#F7C343","#E45F3F"];
 
-
+// style={{ width: "300px", height: 300 ,background:"#fff",margin:"0 20px", borderRadius:"16px", boxshadow: "0px 2px 10px 0px #0000001A",}}
 const Piechart = () => {
     return (
-        <div style={{ width: "300px", height: 300 ,background:"#fff",margin:"0 20px", borderRadius:"16px", boxshadow: "0px 2px 10px 0px #0000001A",}}>
+        <div className='payroll-piechart' >
           <ResponsiveContainer>
             <PieChart>
               <Pie

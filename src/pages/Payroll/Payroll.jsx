@@ -24,7 +24,7 @@ export const Payroll = () => {
     return (
         <div className='payroll'>
             <TopSearch/>
-           <div  className="payroll-two-cards" style={{display:'flex', flexDirections:'row',flexWrap:'wrap',justifyContent:'space-between',marginTop:"20px"}}> 
+           <div  className="d-flex flex-wrap justify-content-between mt-4" > 
            <Chart data={data}  />
            <PieChart className="payroll-pie-chart"/>
            </div>

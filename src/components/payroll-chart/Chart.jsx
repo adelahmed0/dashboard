@@ -32,7 +32,7 @@ import {
         </div>
       </div>
 
-<ResponsiveContainer width="100%" height={200} style={{ marginLeft: '-3%' }}>
+<ResponsiveContainer width="100%" height={300} style={{ marginLeft: '-3%' }}>
         <BarChart
           data={data}
           margin={{
