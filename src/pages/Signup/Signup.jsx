@@ -14,7 +14,7 @@ export const Signup = () => {
                     <h1>SignUp</h1>
                     <p>Enter your email and password to sign in!</p>
 
-                    <button>
+                    <button className="Signup-with-Google"> 
                         <FcGoogle/> Signup with Google
                     </button>
 
@@ -50,12 +50,10 @@ export const Signup = () => {
               </span>{" "}
                             I agree to the <span className="span">Term &Conditions</span>
                         </h3>
-                        <input type="text" placeholder="Sign Up" className="submit"/>
+                        <input type="button" value="Sign Up" className="submit"/>
                         <p className="text">
-                            Already Have Account ?<span className="sign-in">Sign in</span>
+                            Already Have Account ? <span className="sign-in">Sign in</span>
                         </p>
-
-                        <p className="rights">&copy; 2023 On Time. All rights reserved.</p>
                     </div>
                 </div>
             </div>
